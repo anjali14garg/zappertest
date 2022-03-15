@@ -1,24 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import { ZapparCamera, ZapperCanvas } from "@zappar/zappar-react-three-fiber";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ZapperCanvas>
+      {/* Setup Zappar Camera*/}
+      <ZapparCamera />
+      {/* Setup Image Tracker, passing our target file */}
+     
+        {/* Create a normal pink sphere to be tracked to the target */}
+        <mesh>
+          <sphereBufferGeometry />
+          <meshStandardMaterial color="hotpink" />
+        </mesh>
+ 
+      {/* Normal directional light */}
+      <directionalLight />
+    </ZapperCanvas>
   );
 }
 
