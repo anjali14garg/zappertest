@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import { ZapparCamera, ZapperCanvas } from "@zappar/zappar-react-three-fiber";
+import { ZapparCamera, ZapparCanvas } from "@zappar/zappar-react-three-fiber";
 
 
 function App() {
   return (
-    <ZapperCanvas>
+    <ZapparCanvas>
       {/* Setup Zappar Camera*/}
       <ZapparCamera />
       {/* Setup Image Tracker, passing our target file */}
@@ -18,7 +18,7 @@ function App() {
  
       {/* Normal directional light */}
       <directionalLight />
-    </ZapperCanvas>
+    </ZapparCanvas>
   );
 }
 
